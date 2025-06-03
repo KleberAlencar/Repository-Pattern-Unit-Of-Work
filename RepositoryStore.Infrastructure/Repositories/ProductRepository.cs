@@ -14,10 +14,11 @@ public class ProductRepository(AppDbContext context) : IProductRepository
             .Where(specification.ToExpression())
             .FirstOrDefaultAsync(cancellationToken);
 
-    public Task<IEnumerable<Product>> GetAllAsync(int skip = 0, int take = 25, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<IEnumerable<Product>> GetAllAsync(int skip = 0, int take = 25, CancellationToken cancellationToken = default)
+        => await context.Products
+            .AsNoTracking()
+            .Skip(skip).Take(take)
+            .ToListAsync(cancellationToken);
 
     public async Task CreateAsync(Product product, CancellationToken cancellationToken = default)
         =>  await context.Products.AddAsync(product, cancellationToken);

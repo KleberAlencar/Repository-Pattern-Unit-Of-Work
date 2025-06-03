@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using RepositoryStore.Infrastructure.Data;
 
 namespace RepositoryStore.Api.Endpoints;
 

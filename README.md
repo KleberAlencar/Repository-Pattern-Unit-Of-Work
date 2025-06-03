@@ -12,4 +12,5 @@ In this project, I will create a sample repository pattern app.
 5. Unit Of Work;
 6. Specification Pattern;
 7. Repository Pattern;
-8. Aggregate Root.
+8. API Documentation with Scalar;
+9. Aggregate Root.
