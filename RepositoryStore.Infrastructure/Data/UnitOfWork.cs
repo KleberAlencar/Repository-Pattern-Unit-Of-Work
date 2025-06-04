@@ -1,4 +1,4 @@
-﻿using RepositoryStore.Domain.Abstractions;
+﻿using RepositoryStore.Domain.SharedContext.Repositories.Abstractions;
 
 namespace RepositoryStore.Infrastructure.Data;
 

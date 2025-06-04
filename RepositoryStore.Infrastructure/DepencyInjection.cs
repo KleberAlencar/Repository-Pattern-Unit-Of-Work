@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using RepositoryStore.Domain.Abstractions;
+﻿using RepositoryStore.Infrastructure.Data;
+using Microsoft.Extensions.DependencyInjection;
 using RepositoryStore.Infrastructure.Repositories;
-using RepositoryStore.Domain.Repositories.Abstractions;
-using RepositoryStore.Infrastructure.Data;
+using RepositoryStore.Domain.SharedContext.Repositories.Abstractions;
+using RepositoryStore.Domain.ProductContext.Repositories.Abstractions;
 
 namespace RepositoryStore.Infrastructure;
 

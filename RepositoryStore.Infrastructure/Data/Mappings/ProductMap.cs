@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RepositoryStore.Domain.Entities;
+using RepositoryStore.Domain.ProductContext.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace RepositoryStore.Infrastructure.Data.Mappings;

@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RepositoryStore.Domain.Entities;
 using RepositoryStore.Infrastructure.Data;
-using RepositoryStore.Domain.Specifications;
-using RepositoryStore.Domain.Repositories.Abstractions;
+using RepositoryStore.Domain.ProductContext.Entities;
+using RepositoryStore.Domain.ProductContext.Repositories.Abstractions;
+using RepositoryStore.Domain.SharedContext.Specifications.Abstractions;
 
 namespace RepositoryStore.Infrastructure.Repositories;
 

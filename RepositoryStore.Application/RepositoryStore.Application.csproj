@@ -15,4 +15,9 @@
     <ProjectReference Include="..\RepositoryStore.Infrastructure\RepositoryStore.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ProductContext\UseCases\GetAll\" />
+    <Folder Include="SharedContext\" />
+  </ItemGroup>
+
 </Project>

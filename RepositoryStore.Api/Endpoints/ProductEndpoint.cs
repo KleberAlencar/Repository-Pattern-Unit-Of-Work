@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using RepositoryStore.Infrastructure.Data;
 
 namespace RepositoryStore.Api.Endpoints;
 
@@ -9,7 +8,7 @@ public static class ProductEndpoint
     {
         groupBuilder.MapGet("/{id:Guid}", async (ISender sender, Guid id, CancellationToken cancellationToken) =>
         {
-            var command = new Application.UseCases.Products.GetById.Command(id);
+            var command = new Application.ProductContext.UseCases.GetById.Query(id);
             var result = await sender.Send(command, cancellationToken);
             if (!result.IsSuccess) Results.BadRequest(result.Error);
             
@@ -18,7 +17,7 @@ public static class ProductEndpoint
 
         groupBuilder.MapPost("/", async (
             ISender sender, 
-            Application.UseCases.Products.Create.Command command, 
+            Application.ProductContext.UseCases.Create.Command command, 
             CancellationToken cancellationToken) =>
         {
             var result = await sender.Send(command, cancellationToken);
